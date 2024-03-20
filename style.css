@@ -67,7 +67,6 @@ a {
 .landing-header-connexion:hover {
   transform: scale(0.9);
   background-color: #495057;
-  text-decoration: underline;
   color: #F8F9FA;
 }
 .landing-main {
@@ -117,7 +116,6 @@ a {
 .landing-main-buttons-buy:hover {
   transform: scale(0.9);
   background-color: #495057;
-  text-decoration: underline;
   color: #F8F9FA;
 }
 .landing-main-buttons-sell {
@@ -137,8 +135,57 @@ a {
 .landing-main-buttons-sell:hover {
   transform: scale(0.9);
   background-color: #F8F9FA;
-  text-decoration: underline;
   color: #212529;
+}
+
+.stats {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 167px;
+}
+.stats-img-brainstorm {
+  width: 100%;
+}
+.stats-container {
+  display: grid;
+  gap: 40px;
+  grid-template-areas: "container container container" "data data data";
+}
+.stats-container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  grid-area: container;
+}
+.stats-container-text-title {
+  font-size: 46px;
+  font-weight: 800;
+  color: #212529;
+  line-height: 46px;
+}
+.stats-container-text-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ADB5BD;
+}
+.stats-container-data {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-area: data;
+  gap: 32px;
+}
+.stats-container-data-infos-nbr {
+  font-size: 46px;
+  font-weight: 600;
+  color: #212529;
+}
+.stats-container-data-infos-name {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
