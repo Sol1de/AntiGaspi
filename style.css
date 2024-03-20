@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.landing {
+  height: 100dvh;
+  width: 100%;
+}
+.landing-header {
+  display: flex;
+  align-items: center;
+  background-color: #212529;
+  padding: 24px 167px;
+  justify-content: space-between;
+}
+.landing-header-container {
+  display: flex;
+  width: 30%;
+}
+.landing-header-container-search {
+  width: 100%;
+  background-color: #F8F9FA;
+  padding-left: 4px;
+  border-radius: 0px 8px 8px 0px;
+  height: 45px;
+}
+.landing-header-container-icon {
+  background-color: #F8F9FA;
+  padding-left: 16px;
+  border-radius: 8px 0px 0px 8px;
+}
+.landing-header-connexion {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 3px;
+  background-color: #F8F9FA;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #212529;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
