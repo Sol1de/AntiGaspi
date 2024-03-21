@@ -234,7 +234,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    min-height: 100dvh;
     padding: 80px 167px;
 
     &-infos {
@@ -265,19 +265,32 @@ section {
 
         &-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             padding: 20px;
             border: 2px solid $gris-clair;
             border-radius: 6px;
 
-            &-paragraph {
-                @include font(16px, $semibold);
-                color: $noir;
+            &-text {
+                display: flex;
+                justify-content: space-between;
+
+                &-paragraph {
+                    @include font(16px, $semibold);
+                    color: $noir;
+                }
+    
+                &-button {
+                    background: none;
+                    cursor: pointer;
+                }
             }
 
-            &-button {
-                background: none;
-                cursor: pointer;
+            &-answer {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.5s ease;
+                @include font(14px, $regular);
+                color: $gris-moyen;
             }
         }
     }

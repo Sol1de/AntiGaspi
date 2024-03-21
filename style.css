@@ -199,7 +199,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
+  min-height: 100dvh;
   padding: 80px 167px;
 }
 .faq-infos {
@@ -229,19 +229,31 @@ section {
 }
 .faq-infos-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 20px;
   border: 2px solid #DEE2E6;
   border-radius: 6px;
 }
-.faq-infos-container-paragraph {
+.faq-infos-container-text {
+  display: flex;
+  justify-content: space-between;
+}
+.faq-infos-container-text-paragraph {
   font-size: 16px;
   font-weight: 600;
   color: #212529;
 }
-.faq-infos-container-button {
+.faq-infos-container-text-button {
   background: none;
   cursor: pointer;
+}
+.faq-infos-container-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ADB5BD;
 }
 
 .footer {
