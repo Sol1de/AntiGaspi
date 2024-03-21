@@ -21,6 +21,10 @@ a {
   color: #495057;
 }
 
+section {
+  background-color: #F8F9FA;
+}
+
 .landing {
   height: 100dvh;
   width: 100%;
@@ -172,6 +176,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   color: #ADB5BD;
+  line-height: 1.2em;
 }
 .stats-container-data {
   display: grid;
@@ -188,6 +193,55 @@ a {
 .stats-container-data-infos-name {
   font-size: 16px;
   font-weight: 600;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  padding: 80px 167px;
+}
+.faq-infos {
+  display: flex;
+  margin-right: 80px;
+  flex-direction: column;
+  gap: 24px;
+}
+.faq-infos-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.faq-infos-text-title {
+  font-size: 46px;
+  font-weight: 800;
+  color: #212529;
+  line-height: 46px;
+  text-align: center;
+}
+.faq-infos-text-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ADB5BD;
+  text-align: center;
+  line-height: 1.2em;
+}
+.faq-infos-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid #DEE2E6;
+  border-radius: 6px;
+}
+.faq-infos-container-paragraph {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+}
+.faq-infos-container-button {
+  background: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

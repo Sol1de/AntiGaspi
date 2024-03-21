@@ -76,6 +76,10 @@ a {
     color: $gris-fonce;
 }
 
+section {
+    background-color: $blanc;
+}
+
 //main css
 .landing {
     height: 100dvh;
@@ -200,6 +204,7 @@ a {
                 &-paragraph {
                     @include font(16px, $regular);
                     color: $gris-moyen;
+                    line-height: 1.2em;
                 }
         }
 
@@ -220,6 +225,59 @@ a {
                 &-name {
                     @include font(16px, $semibold)
                 }
+            }
+        }
+    }
+}
+
+.faq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    padding: 80px 167px;
+
+    &-infos {
+        display: flex;
+        margin-right: 80px;
+        flex-direction: column;
+        gap: 24px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-title {
+                @include font(46px, $extrabold);
+                color: $noir;
+                line-height: 46px;
+                text-align: center;
+            }
+
+            &-paragraph {
+                @include font(16px, $regular);
+                color: $gris-moyen;
+                text-align: center;
+                line-height: 1.2em;
+            }
+        }
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 2px solid $gris-clair;
+            border-radius: 6px;
+
+            &-paragraph {
+                @include font(16px, $semibold);
+                color: $noir;
+            }
+
+            &-button {
+                background: none;
+                cursor: pointer;
             }
         }
     }
