@@ -1,0 +1,38 @@
+@import "header";
+@import "footer";
+@import "general";
+
+.landing {
+    height: 100dvh;
+
+    &-roadmap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        height: calc(100% - 97px);
+        padding: 40px 167px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-title {
+                @include font($title3, $extrabold);
+                color: $noir;
+                text-align: center;
+            }
+
+            &-paragraph {
+                @include font($text3, $regular);
+                color: $gris-moyen;
+                text-align: center;
+            }
+        }
+
+        &-map {
+            height: 100%;
+            border-radius: 8px;
+        }
+    }
+}

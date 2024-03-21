@@ -1,0 +1,188 @@
+@import "header";
+@import "footer";
+@import "general";
+
+//main css
+.landing {
+    height: 100dvh;
+    width: 100%;
+
+    &-main {
+        height: calc(100% - 97px);
+        background-image: url("assets/hero.png");
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 100%), url('assets/hero.png') no-repeat;
+        background-size: cover;
+        color: $blanc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 167px;
+        gap: 32px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-title {
+                @include font($title1, $extrabold);
+                line-height: 1em;
+            }
+
+            &-paragraph {
+                @include font($text3, $regular);
+                color: $gris-clair;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            gap: 16px;
+
+            &-buy {
+                @include button($noir, $blanc, $blanc, $gris-fonce);
+            }
+
+            &-sell {
+                @include button($blanc, transparent, $noir, $blanc);
+                border: 1px solid $blanc;
+            }
+            
+
+        }
+    }
+}
+
+.stats {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 167px;
+    margin-inline: auto;
+
+    &-img {
+
+        &-brainstorm {
+            width: 100%;
+        }
+    }
+    
+    &-container {
+        display: grid;
+        gap: 40px;
+        grid-template-areas: 
+            "container container container"
+            "data data data";
+        margin-left: 80px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            grid-area: container;
+
+                &-title {
+                    @include font(46px, $extrabold);
+                    color: $noir;
+                    line-height: 46px;
+                }
+
+                &-paragraph {
+                    @include font(16px, $regular);
+                    color: $gris-moyen;
+                    line-height: 1.2em;
+                }
+        }
+
+        &-data {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-area: data;
+            gap: 32px;
+
+            &-infos {
+
+                &-nbr {
+                    @include font(46px, $semibold);
+                    color: $noir;
+                }
+                
+                &-name {
+                    @include font(16px, $semibold)
+                }
+            }
+        }
+    }
+}
+
+.faq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 80px 167px;
+
+    &-infos {
+        display: flex;
+        margin-right: 80px;
+        flex-direction: column;
+        gap: 24px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-title {
+                @include font(46px, $extrabold);
+                color: $noir;
+                line-height: 46px;
+                text-align: center;
+            }
+
+            &-paragraph {
+                @include font(16px, $regular);
+                color: $gris-moyen;
+                text-align: center;
+                line-height: 1.2em;
+            }
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px solid $gris-clair;
+            border-radius: 6px;
+            background-color: #FFFFFF;
+
+            &-text {
+                display: flex;
+                justify-content: space-between;
+                transition: all 0.5s ease;
+
+                &-paragraph {
+                    @include font(16px, $semibold);
+                    color: $noir;
+                }
+    
+                &-button {
+                    background: none;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &-answer {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.5s ease;
+                @include font(14px, $regular);
+                color: $gris-moyen;
+            }
+        }
+    }
+}

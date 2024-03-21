@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
     <section class="landing">
@@ -16,6 +17,20 @@
             </div>
             <button class="landing-header-connexion"><img src="assets/icons/user.svg" alt="user" class="landing-header-connexion-arrow">Connexion</button>
         </header>
+
+        <div class="landing-roadmap">
+            <div class="landing-roadmap-text">
+                <h1 class="landing-roadmap-text-title">En recherches d’économies ?</h1>
+                <p class="landing-roadmap-text-paragraph">Vous ne savez pas où nous trouver ? Notre carte interractive est la pour vous aider <br> ! Visionnez dès maintenant les vendeurs les plus proches de vous</p>
+            </div>
+
+            <div id="map" class="landing-roadmap-map">
+
+            </div>
+        </div>
     </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/roadmap.js"></script>
 </body>
 </html>
