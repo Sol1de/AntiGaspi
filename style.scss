@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+//vars clrs
+$noir: #212529;
+$gris-fonce: #495057;
+$gris-moyen: #ADB5BD;
+$gris-clair: #DEE2E6;
+$blanc: #F8F9FA;
+
+//vars weight
+$extrabold: 800;
+$bold: 700;
+$semibold: 600;
+$regular: 400;
+
+//vers sizes
+$title1: 80px;
+$subtitle1: 22px;
+
+//mixins
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin button($color, $bckg-clr, $hover, $bckg-hover) {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 15px 18px;
+    color: $color;
+    background-color: $bckg-clr;
+    font-size: 16px;
+    font-weight: $semibold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+        transform: scale(0.9);
+        background-color: $bckg-hover;
+        color: $hover;
+    }
+
+}
+
+//reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: $gris-fonce;
+}
+
+//main css
+.landing {
+    height: 100dvh;
+    width: 100%;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        background-color: $noir;
+        padding: 24px 167px;
+        justify-content: space-between;
+
+        &-container {
+            display: flex;
+            width: 30%;
+
+            &-search {
+                width: 100%;
+                background-color: $blanc;
+                padding-left: 4px;
+                border-radius: 0px 8px 8px 0px;
+                height: 45px;
+            }
+
+            &-icon {
+                background-color: $blanc;
+                padding-left: 16px;
+                border-radius: 8px 0px 0px 8px;
+            }
+        }
+
+        &-connexion {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            @include button($noir, $blanc, $blanc, $gris-fonce)
+        }
+    }
+
+    &-main {
+        height: calc(100% - 93px);
+        background-image: url("assets/hero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $blanc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 167px;
+        gap: 32px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &-title {
+                @include font($title1, $extrabold);
+                line-height: 1em;
+            }
+
+            &-paragraph {
+                @include font($subtitle1, $regular);
+                color: $gris-clair;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            gap: 16px;
+
+            &-buy {
+                @include button($noir, $blanc, $blanc, $gris-fonce);
+            }
+
+            &-sell {
+                @include button($blanc, transparent, $noir, $blanc);
+                border: 1px solid $blanc;
+            }
+            
+
+        }
+    }
+}
+
+.stats {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 167px;
+
+    &-img {
+
+        &-brainstorm {
+            width: 100%;
+        }
+    }
+    
+    &-container {
+        display: grid;
+        gap: 40px;
+        grid-template-areas: 
+            "container container container"
+            "data data data";
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            grid-area: container;
+
+                &-title {
+                    @include font(46px, $extrabold);
+                    color: $noir;
+                    line-height: 46px;
+                }
+
+                &-paragraph {
+                    @include font(16px, $regular);
+                    color: $gris-moyen;
+                }
+        }
+
+        &-data {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-area: data;
+            gap: 32px;
+
+            &-infos {
+
+                &-nbr {
+                    @include font(46px, $semibold);
+                    color: $noir;
+                }
+                
+                &-name {
+                    @include font(16px, $semibold)
+                }
+            }
+        }
+    }
+}
