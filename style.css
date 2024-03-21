@@ -73,6 +73,75 @@ section {
   background-color: #495057;
   color: #F8F9FA;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #495057;
+}
+
+section {
+  background-color: #F8F9FA;
+}
+
+.footer {
+  display: flex;
+  padding: 50px 167px;
+  background-color: #212529;
+  color: #F8F9FA;
+  justify-content: space-between;
+}
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #495057;
+}
+
+section {
+  background-color: #F8F9FA;
+}
+
+.landing {
+  height: 100dvh;
+  width: 100%;
+}
 .landing-main {
   height: calc(100% - 93px);
   background-image: url("assets/hero.png");
@@ -143,7 +212,7 @@ section {
 }
 
 .stats {
-  height: 100dvh;
+  height: fit-content;
   width: 100%;
   display: flex;
   align-items: center;
@@ -199,7 +268,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
+  height: fit-content;
   padding: 80px 167px;
 }
 .faq-infos {
@@ -256,18 +325,6 @@ section {
   font-size: 14px;
   font-weight: 400;
   color: #ADB5BD;
-}
-
-.footer {
-  display: flex;
-  padding: 50px 167px;
-  background-color: #212529;
-  color: #F8F9FA;
-  justify-content: space-between;
-}
-.footer-social {
-  display: flex;
-  gap: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
