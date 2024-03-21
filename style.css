@@ -244,4 +244,16 @@ section {
   cursor: pointer;
 }
 
+.footer {
+  display: flex;
+  padding: 50px 167px;
+  background-color: #212529;
+  color: #F8F9FA;
+  justify-content: space-between;
+}
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
 /*# sourceMappingURL=style.css.map */

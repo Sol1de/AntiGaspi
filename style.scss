@@ -282,3 +282,16 @@ section {
         }
     }
 }
+
+.footer {
+    display: flex;
+    padding: 50px 167px;
+    background-color: $noir;
+    color: $blanc;
+    justify-content: space-between;
+
+    &-social {
+        display: flex;
+        gap: 16px;
+    }
+}
