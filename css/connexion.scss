@@ -1,0 +1,111 @@
+@import "header";
+@import "footer";
+@import "general";
+
+.landing  {
+    
+    &-connexion {
+        height: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $gris-clair;
+        padding: 40px 167px;
+        gap: 38px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+
+            &-title {
+                @include font($title3, $extrabold);
+                color: $noir;
+            }
+
+            &-paragraph {
+                @include font($text3, $regular);
+                color: $gris-fonce;
+            }
+        }
+
+        &-container {
+            display: flex;
+            align-items: center;
+
+            &-img {
+                display: flex;
+                justify-content: center;
+                width: auto;
+
+                &-connect {
+                    width: 100%;
+                }
+            }
+
+            &-data {
+                width: 60%;
+                margin-left: 50px;
+                padding: 32px;
+                background-color: $blanc;
+                border-radius: 8px;
+                border: 1px solid #E1E4ED;
+                box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                &-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    &-label {
+                        @include font($text3, $semibold);
+                        color: $noir;
+                    }
+
+                    &-input {
+                        padding: 18px 16px;
+                        border-radius: 6px;
+                        border: 1px solid #F1F3F7;
+                        background-color: #FFFFFF;
+                        box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+                    }
+                }
+
+                &-paragraph {
+                    @include font($smalltext1, $regular);
+                    color: $noir;
+                
+                }
+
+                &-button {
+                    @include button($blanc, $noir, $noir, $blanc);
+                    width: fit-content;
+                    
+                    @include media($medium-screen) {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+
+                @include media($medium-screen) {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top:50px
+                }
+            }
+
+            @include media($medium-screen) {
+                flex-direction: column;
+            }
+        }
+
+        @include media($medium-screen) {
+            padding: 50px 34px;
+            height: fit-content;
+        }
+    }
+}

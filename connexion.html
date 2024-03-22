@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="landing">
+        <header class="landing-header">
+            <a href="index.html" class="landing-header-logo"><img src="assets/logo.svg" alt="Logo" class="landing-header-img"></a>
+            <div class="landing-header-container">
+                <img src="assets/icons/search.svg" alt="glass" class="landing-header-container-icon">
+                <input type="text" placeholder="Rechercher..." class="landing-header-container-search">
+            </div>
+            <a href="connexion.html" class="landing-header-connexion"><img src="assets/icons/user.svg" alt="user" class="landing-header-connexion-arrow">Connexion</a>
+        </header>
+
+        <div class="landing-connexion">
+            <div class="landing-connexion-text">
+                <h1 class="landing-connexion-text-title">Connectez vous</h1>
+                <p class="landing-connexion-text-paragraph">Si vous avez des problèmes de connexion contactez notre support à l’adresse <br> <u>support@antigaspi.com</u></p>
+            </div>
+
+            <div class="landing-connexion-container">
+                <div class="landing-connexion-container-img">
+                    <img src="./assets/connect.svg" alt="connect" class="landing-connexion-container-img-connect">
+                </div>
+
+                <form action="index.html" class="landing-connexion-container-data">
+                    <div class="landing-connexion-container-data-grid">
+                        <label for="id" class="landing-connexion-container-data-grid-label">Identifiant</label>
+                        <input type="text" name="id" placeholder="mail, nom, telephone..." class="landing-connexion-container-data-grid-input">
+                    </div>
+                    <div class="landing-connexion-container-data-grid">
+                        <label for="mail" class="landing-connexion-container-data-grid-label">Email</label>
+                        <input type="text" name="mail" placeholder="example@youremail.com" class="landing-connexion-container-data-grid-input">
+                    </div>
+                    <p class="landing-connexion-container-data-paragraph">Vous n’avez pas de comptes ? <u>Créez en un</u></p> 
+                    <button type="submit" class="landing-connexion-container-data-button">Connexion <img src="./assets/icons/arrowWhite.svg" alt=""></button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-copiryght">Copyright © 2025 AntiGaspi | All Rights Reserved</p>
+    
+            <div class="footer-social">
+                <a href=""><img src="assets/icons/facebook.svg" alt="facebook"></a>
+                <a href=""><img src="assets/icons/twitter.svg" alt="twitter"></a>
+                <a href=""><img src="assets/icons/instagram.svg" alt="instagram"></a>
+                <a href=""><img src="assets/icons/linkedIn.svg" alt="linkedin"></a>
+                <a href=""><img src="assets/icons/youTube.svg" alt="youtube"></a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
