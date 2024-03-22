@@ -27,12 +27,22 @@
             &-title {
                 @include font($title1, $extrabold);
                 line-height: 1em;
+
+                @include media($medium-screen) {
+                    font-size: 52px;
+                    text-align: center;
+                }
             }
 
             &-paragraph {
                 @include font($text3, $regular);
                 color: $gris-clair;
+
+                @include media($medium-screen) {
+                    text-align: center;
+                }
             }
+            
         }
 
         &-buttons {
@@ -41,14 +51,33 @@
 
             &-buy {
                 @include button($noir, $blanc, $blanc, $gris-fonce);
+
+                @include media($medium-screen) {
+                    width: 100%;
+                }
             }
 
             &-sell {
                 @include button($blanc, transparent, $noir, $blanc);
                 border: 1px solid $blanc;
+
+                @include media($medium-screen) {
+                    width: 100%;
+                    justify-content: center;
+                }
             }
             
-
+            @include media($medium-screen) {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+        
+        @include media($medium-screen) {
+            background-position: center;
+            padding: 50px 34px;
+            align-items: center;
+            height: 100%;
         }
     }
 }
@@ -63,8 +92,19 @@
     margin-inline: auto;
 
     &-img {
+        display: flex;
+        justify-content: center;
+        width: auto;
 
         &-brainstorm {
+            width: 100%;
+
+            @include media($medium-screen) {
+                width: 80%;
+            }
+        }
+
+        @include media($medium-screen) {
             width: 100%;
         }
     }
@@ -76,6 +116,7 @@
             "container container container"
             "data data data";
         margin-left: 80px;
+        width: 50%;
 
         &-text {
             display: flex;
@@ -87,13 +128,27 @@
                     @include font(46px, $extrabold);
                     color: $noir;
                     line-height: 46px;
+                    
+                    @include media($medium-screen) {
+                        font-size: 40px;
+                        line-height: 36px;
+                        text-align: center;
+                    }
                 }
 
                 &-paragraph {
                     @include font(16px, $regular);
                     color: $gris-moyen;
                     line-height: 1.2em;
+
+                    @include media($medium-screen) {
+                        text-align: center;
+                    }
                 }
+            
+            @include media($medium-screen) {
+                gap: 16px;
+            }
         }
 
         &-data {
@@ -102,19 +157,61 @@
             grid-template-columns: repeat(2, 1fr);
             grid-area: data;
             gap: 32px;
+            width: 100%;
 
             &-infos {
+                width: 100%;
 
                 &-nbr {
                     @include font(46px, $semibold);
                     color: $noir;
+
+                    @include media($medium-screen) {
+                        text-align: center;
+                    }
                 }
                 
                 &-name {
-                    @include font(16px, $semibold)
+                    @include font(16px, $semibold);
+
+                    @include media($medium-screen) {
+                        text-align: center;
+                    }
+                }
+
+                &-paragraph {
+                    display: none;
+
+                    @include media($medium-screen) {
+                        display: block;
+                        @include font(14px, $regular);
+                        color: $gris-moyen;
+                        text-align: center;
+                    }
+                }
+
+                @include media($medium-screen) {
+                    gap: 8px;
+                    width: 65%;
                 }
             }
+
+            @include media($medium-screen) {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
         }
+
+        @include media($medium-screen) {
+            margin-left: 0px;
+            width: 100%;
+        }
+    }
+
+    @include media($medium-screen) {
+        padding: 50px 34px;
+        flex-direction: column;
+        gap: 48px;
     }
 }
 
@@ -130,6 +227,7 @@
         margin-right: 80px;
         flex-direction: column;
         gap: 24px;
+        width: 50%;
 
         &-text {
             display: flex;
@@ -141,6 +239,12 @@
                 color: $noir;
                 line-height: 46px;
                 text-align: center;
+
+                @include media($medium-screen) {
+                    font-size: 40px;
+                    line-height: 36px;
+                    text-align: center;
+                }
             }
 
             &-paragraph {
@@ -148,6 +252,10 @@
                 color: $gris-moyen;
                 text-align: center;
                 line-height: 1.2em;
+            }
+
+            @include media($medium-screen) {
+                gap: 16px;
             }
         }
 
@@ -173,6 +281,7 @@
                     background: none;
                     cursor: pointer;
                     transition: transform 0.3s ease;
+                    user-select: none;
                 }
             }
 
@@ -183,6 +292,35 @@
                 @include font(14px, $regular);
                 color: $gris-moyen;
             }
+        }
+    }
+
+    &-img {
+        width: auto;
+        justify-content: center;
+        display: flex;
+
+        &-idea {
+            width: 100%;
+
+            @include media($medium-screen) {
+                width: 80%;
+            }
+        }
+
+        @include media($medium-screen) {
+            width: 100%;
+        }
+    }
+
+    @include media($medium-screen) {
+        padding: 50px 34px;
+        flex-direction: column;
+        gap: 48px;
+
+        &-infos {
+            width: 100%;
+            margin-right: 0;
         }
     }
 }

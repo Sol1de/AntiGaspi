@@ -21,12 +21,29 @@
                 padding-left: 4px;
                 border-radius: 0px 8px 8px 0px;
                 height: 45px;
+
+                @include media($medium-screen) {
+                    padding: 10px 13px;
+                    height: auto;
+                }
             }
 
             &-icon {
                 background-color: $blanc;
                 padding-left: 16px;
                 border-radius: 8px 0px 0px 8px;
+
+                @include media($medium-screen) {
+                    padding: 10px 13px;
+                }
+            }
+
+            @include media($medium-screen) {
+                width: 40%;
+            }
+
+            @include media($small-screen) {
+                display: none;
             }
         }
 
@@ -34,7 +51,25 @@
             display: flex;
             align-items: center;
             gap: 3px;
-            @include button($noir, $blanc, $blanc, $gris-fonce)
+            @include button($noir, $blanc, $blanc, $gris-fonce);
+
+            @include media($medium-screen) {
+                padding: 10px 13px;
+                height: 36px;
+            }
+
+            @include media($thin-screen) {
+                display: none;
+            }
+        }
+
+        @include media($medium-screen) {
+            padding: 24px 34px;
+        }
+
+        @include media($thin-screen) {
+            justify-content: center;
+            padding: 14px 24px;
         }
     }
 }

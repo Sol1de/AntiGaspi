@@ -7,8 +7,22 @@
     color: $blanc;
     justify-content: space-between;
 
+    &-copiryght {
+        text-align: center;
+    }
+
     &-social {
         display: flex;
         gap: 16px;
+    }
+
+    @include media($medium-screen) {
+        padding: 24px 34px;
+    }
+
+    @include media($small-screen) {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
     }
 }

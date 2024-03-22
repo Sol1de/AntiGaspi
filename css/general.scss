@@ -11,7 +11,7 @@ $bold: 700;
 $semibold: 600;
 $regular: 400;
 
-//vers sizes
+//vars sizes
 $title1: 72px;
 $title2: 60px;
 $title3: 48px;
@@ -23,6 +23,14 @@ $text2: 18px;
 $text3: 16px;
 $smalltext1: 14px;
 $smalltext2: 12px;
+
+//wars screens
+$thin-screen: 280px;
+$light-screen: 376px;
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$xlarge-screen: 1200px;
 
 //mixins
 @mixin font($size, $weight) {
@@ -49,6 +57,12 @@ $smalltext2: 12px;
         color: $hover;
     }
 
+}
+
+@mixin media($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content
+      }
 }
 
 //reset
