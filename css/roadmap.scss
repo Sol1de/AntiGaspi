@@ -21,18 +21,35 @@
                 @include font($title3, $extrabold);
                 color: $noir;
                 text-align: center;
+
+                @include media($medium-screen) {
+                    font-size: 38px;
+                    line-height: 1em;
+                }
+
+                @include media($thin-screen) {
+                    font-size: 28px;
+                }
             }
 
             &-paragraph {
                 @include font($text3, $regular);
                 color: $gris-moyen;
                 text-align: center;
+
+                @include media($small-screen) {
+                    display: none;
+                }
             }
         }
 
         &-map {
             height: 100%;
             border-radius: 8px;
+        }
+
+        @include media($medium-screen) {
+            padding: 50px 34px;
         }
     }
 }

@@ -964,15 +964,36 @@ section {
   color: #212529;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .landing-roadmap-text-title {
+    font-size: 38px;
+    line-height: 1em;
+  }
+}
+@media screen and (max-width: 280px) {
+  .landing-roadmap-text-title {
+    font-size: 28px;
+  }
+}
 .landing-roadmap-text-paragraph {
   font-size: 16px;
   font-weight: 400;
   color: #ADB5BD;
   text-align: center;
 }
+@media screen and (max-width: 576px) {
+  .landing-roadmap-text-paragraph {
+    display: none;
+  }
+}
 .landing-roadmap-map {
   height: 100%;
   border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .landing-roadmap {
+    padding: 50px 34px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
