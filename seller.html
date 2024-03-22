@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="landing">
+        <header class="landing-header">
+            <a href="index.html" class="landing-header-logo"><img src="assets/logo.svg" alt="Logo" class="landing-header-img"></a>
+            <div class="landing-header-container">
+                <img src="assets/icons/search.svg" alt="glass" class="landing-header-container-icon">
+                <input type="text" placeholder="Rechercher..." class="landing-header-container-search">
+            </div>
+            <button class="landing-header-connexion"><img src="assets/icons/user.svg" alt="user" class="landing-header-connexion-arrow">Connexion</button>
+        </header>
+
+        <div class="landing-seller">
+            <form action="index.html" class="landing-seller-form">
+                <div class="landing-seller-form-row">
+                    <div class="landing-seller-form-row-grid">
+                        <label for="name" class="landing-seller-form-row-grid-label">Nom</label>
+                        <input type="text" name="name" placeholder="Brian Clark" class="landing-seller-form-row-grid-input">
+                    </div>
+                    <div class="landing-seller-form-row-grid">
+                        <label for="mail" class="landing-seller-form-row-grid-label">Mail</label>
+                        <input type="text" name="mail" placeholder="example@youremail.com" class="landing-seller-form-row-grid-input">
+                    </div>
+                </div>
+                <div class="landing-seller-form-row">
+                    <div class="landing-seller-form-row-grid">
+                        <label for="phone" class="landing-seller-form-row-grid-label">Telephone</label>
+                        <input type="number" name="phone" placeholder="(06) XXXXXXXX" class="landing-seller-form-row-grid-input">
+                    </div>
+                    <div class="landing-seller-form-row-grid">
+                        <label for="rib" class="landing-seller-form-row-grid-label">RIB</label>
+                        <input type="text" name="rib" placeholder="FRXXXXXXXXXXXXXXXXXX" class="landing-seller-form-row-grid-input" style="text-transform: uppercase;">
+                    </div>
+                </div>
+                <div class="landing-seller-form-grid">
+                    <label for="text" class="landing-seller-form-grid-label">Un dernier mot ?</label>
+                    <textarea rows="4" cols="50" name="text" placeholder="Ecrivez votre message ici..." class="landing-seller-form-grid-textarea"></textarea>
+                </div>
+                <button type="submit" class="landing-seller-form-button">Envoyer <img src="assets/icons/arrowWhite.svg" alt="" class="landing-seller-form-button-arrow"></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

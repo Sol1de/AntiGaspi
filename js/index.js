@@ -8,8 +8,10 @@ function openFaq(answoriId, plusButtonId) {
     if (answer.style.height === '0px' || answer.style.height === '') {
         answer.style.height = `${maxHeight}px`;
         plusButton.style.transform = 'rotate(45deg)';
+        container.style.boxShadow = '0px 1px 4px 0px rgba(78, 159, 255, 0.20)';
     } else {
         answer.style.height = '0';
         plusButton.style.transform = 'rotate(0deg)';
+        container.style.boxShadow = '0px 0.5px 2px 0px rgba(25, 33, 61, 0.10)';
     }
 }

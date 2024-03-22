@@ -91,3 +91,9 @@ a {
 section {
     background-color: $blanc;
 }
+
+textarea {
+    outline: none;
+    border: none;
+    resize: none;
+}

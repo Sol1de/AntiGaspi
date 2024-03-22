@@ -1,0 +1,85 @@
+@import "header";
+@import "footer";
+@import "general";
+
+.landing {
+
+    &-seller {
+        height: calc(100% - 97px);
+        display: flex;
+        align-items: center;
+        padding: 80px 167px;
+        background-color: $gris-clair;
+        background-image: url('../assets/seller.png');
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            background-color: $blanc;
+            padding: 32px;
+            gap: 24px;
+            border-radius: 8px;
+            box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+            border: 1px solid var(--Neutral-colors-400, #E1E4ED);
+
+            &-row {
+                display: flex;
+                gap: 32px;
+
+                &-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    &-label {
+                        @include font($text3, $semibold);
+                        color: $noir;
+                    }
+
+                    &-input {
+                        padding: 18px 16px;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        color: $noir;
+                        box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+                    }
+                }
+            }
+
+            &-grid {
+                display: flex;
+                flex-direction: column;
+
+                &-label {
+                    @extend .landing-seller-form-row-grid-label;
+                }
+
+                &-textarea {
+                    border-radius: 6px;
+                    box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+                    padding: 16px;
+
+                    &::placeholder {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-button {
+                @include button($blanc, $noir, $noir, $blanc);
+                width: fit-content;
+            }
+        }
+
+        @include media($medium-screen) {
+                height: calc(100% - 88px);
+        }
+    
+        @include media($thin-screen) {
+                height: calc(100% - 68px);
+        }
+    }
+}
